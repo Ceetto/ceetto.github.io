@@ -1,4 +1,19 @@
+@prefix :     <https://ceetto.github.io/data.ttl#>.
+@prefix cee:  <https://ceetto.github.io/vocabulary.ttl#>.
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 
+
+:me
+    a cee:Student ;
+    cee:username "Ceetto"^^xsd:string ;
+    cee:firstName "Jahid"^^xsd:string ;
+    cee:lastName "Chetti"^^xsd:string ;
+    cee:likes "games"^^xsd:string ;
+    cee:followsCourse "Knowledge Graphs"^^xsd:string ;
+    cee:playsGame wd:Q112049342 ;
+    cee:knows <https://miboelae.github.io/data.ttl#me> ;
+    cee:knows <https://paulienlem.github.io/data.ttl#me> .
