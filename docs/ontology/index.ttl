@@ -1,0 +1,71 @@
+@prefix cee:  <https://ceetto.github.io/ontology#>.
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+cee:
+    a owl:Ontology ;
+    rdfs:label "Jahid Chetti's ontology" .
+
+
+#Classes
+
+cee:Person
+    a rdfs:Class ;
+    rdfs:label "person"@en  ;
+    rdfs:comment "A class to describe a person"@en .
+
+cee:Student
+    a rdfs:Class ;
+    rdfs:subClassOf cee:Person ;
+    rdfs:label "student"@en  ;
+    rdfs:comment "A class to describe a student"@en .
+
+
+# Properties
+
+cee:username
+    a rdf:Property ;
+    rdfs:domain cee:Person ;
+    rdfs:range xsd:string  ;
+    rdfs:label "username"@en ;
+    rdfs:comment "username of a person"@en .
+
+cee:firstName
+    a rdf:Property ;
+    rdfs:domain cee:Person ;
+    rdfs:range xsd:string  ;
+    rdfs:label "first name"@en ;
+    rdfs:comment "first name of a person"@en .
+
+cee:lastName
+    a rdf:Property ;
+    rdfs:domain cee:Person ;
+    rdfs:range xsd:string  ;
+    rdfs:label "last name"@en ;
+    rdfs:comment "last name of a person"@en .
+
+cee:likes
+    a rdf:Property ;
+    rdfs:domain cee:Student ;
+    rdfs:range xsd:string ;
+    rdfs:label "likes"@en ;
+    rdfs:comment "the hobby of a person"@en .
+
+cee:followsCourse
+    a rdf:Property ;
+    rdfs:domain cee:Student ;
+    rdfs:range xsd:string ;
+    rdfs:label "follows course"@en ;
+    rdfs:comment "Property of a student following a course of a certain name"@en .
+
+cee:playsGame
+    a rdf:predicate ;
+    rdfs:domain cee:Person ;
+    rdfs:label "plays video game"@en .
+
+cee:knows
+    a rdf:predicate ;
+    rdfs:domain cee:Person ;
+    rdfs:label "knows"@en .
